@@ -27,10 +27,10 @@ class GPTDatasetV1(Dataset):
       self.input_ids.append(torch.tensor(input_chunk))
       self.target_ids.append(torch.tensor(target_chunk))
 
-    def __len__(self):
+  def __len__(self):
       return len(self.input_ids)
 
-    def __getitem__(self, idx):
+  def __getitem__(self, idx):
       return self.input_ids[idx], self.target_ids[idx]
 
 
